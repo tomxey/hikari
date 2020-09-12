@@ -203,13 +203,13 @@ class ChannelFollow:
 
 @enum.unique
 @typing.final
-class PermissionOverwriteType(str, enum.Enum):
+class PermissionOverwriteType(int, enum.Enum):
     """The type of entity a Permission Overwrite targets."""
 
-    ROLE = "role"
+    ROLE = 0
     """A permission overwrite that targets all the members with a specific role."""
 
-    MEMBER = "member"
+    MEMBER = 1
     """A permission overwrite that targets a specific guild member."""
 
     def __str__(self) -> str:
